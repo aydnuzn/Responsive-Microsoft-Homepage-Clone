@@ -1,0 +1,72 @@
+/* Text */
+.bg-grey{
+    background-color: #f2f2f2;
+}
+
+.font-size-15{
+    font-size: 15px;
+}
+.font-size-22{
+    font-size: 22px;
+}
+.font-size-10{
+    font-size: 10px;
+}
+.font-weight-600{
+    font-weight: 600;
+}
+.line-height-28{
+    line-height: 28px;
+}
+/*Opacity*/
+.opacity-07{
+    opacity: 0.7;
+}
+
+
+/* Container */
+.container{
+    padding: 0px 5%;
+}
+.margin-bttm{
+    margin-bottom: 50px;
+}
+
+/* Social Media*/
+.facebook-color{
+    color: rgb(59, 84, 153)
+}
+.twitter-color{
+    color: rgb(76, 154, 214)
+}
+.linkedin-color{
+    color: rgb(1, 107, 163)
+}
+.youtube-color{
+    color: red;
+}
+
+/*Açılır pancere checkbox gizleme*/
+.hidden {
+	display: none;
+}
+
+/*radio-bnt*/
+.radio-btn{
+    position: absolute;
+    left: 47%;
+    bottom: 10px;
+    padding-bottom: 10px;
+}
+#slideImage-1 .middle-image-info{
+    left: 10%;
+    top: 50%;
+}
+#slideImage-1 .show-1 .middle-image-info a:last-of-type{
+    color: black;
+    background: transparent;
+    font-weight: bolder;
+    font-size: 13px;
+    padding: 0px;
+    margin-left: 30px;
+}

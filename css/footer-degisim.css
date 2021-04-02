@@ -1,0 +1,104 @@
+
+@media (max-width:1083px){
+    /*footer kısmı*/
+    #footer .footer-upper-nav{
+         /* display: flex;
+        justify-content: flex-start; */
+        flex-direction: column;
+        padding: 0px 12px;
+        height: 552px;
+    }
+    #footer .grup-1, #footer .grup-2{
+        width: 100%;
+        padding-bottom: 8px;
+    }
+    #footer .footer-list{
+        padding-left:12px;
+    }
+
+    /*Alt footer*/
+    #footer .footer-lower-nav .footer-bottom-list{
+        padding: 30px 24px 16px 24px;
+    }
+    
+}
+
+@media (max-width: 1005px){ /*Alt footer*/
+    #footer .footer-lower-nav .footer-bottom-list{
+        /* flex-direction: column; */
+        flex-wrap: wrap;
+    }
+    /* #footer .footer-lower-nav .footer-bottom-list a{
+        margin-bottom: 10px;
+    } */
+    #footer .footer-lower-nav .footer-bottom-list ul{
+        padding-left: 5px;
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 767px){
+    #footer h4{
+        line-height: 24px;
+    }
+    #footer .footer-bottom-list ul li{
+        padding: 6px 4px 0px 6px;
+    }
+
+}
+
+@media (max-width:539px){    
+    /* Footer - Kısmı*/
+    #footer .footer-upper-nav{
+       height: auto;
+   }
+    #footer .grup-1, #footer .grup-2{
+        display: flex;
+        flex-direction: column;
+    }
+   #footer h4{
+    line-height: 20px;
+   }
+   #footer .footer-bottom-list ul li{
+    padding: 6px 10px 0px 0px;
+    }
+}
+
+@media (max-width:376px){
+    #slideImage-1 .show-1 .middle-image-info a:last-of-type {
+        display: block;
+        margin-top: 30px;
+    }
+    .middle-text-process #slideImage-1 #slide-img1 {
+        position: absolute;
+        left: 45%;
+        bottom: 30px;
+    }
+}
+@media (max-width:541px){
+    .middle-text-process .container{
+        height: 470px;
+    }
+    /*Social media kısımda küçültüldüğünde teker teker alta inecekler*/
+    .social-media {
+        margin-top: 15px;
+        display: flex;
+    }
+    .social-media span {
+        padding-right: 20px;
+        margin-top: 10px;
+    }
+}
+/* Galaxy Fold telefon için, en üstteki meu buyuk diye ekranın en sağında boşluk kalıyordu, düzeltildi*/
+@media (max-width:281px){
+    .mobile-menu ul li a {
+        padding: 15px 9px;
+    }    
+    label[class="menu-btn"] {
+        padding: 14px 9px;
+    }
+}
+

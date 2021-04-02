@@ -1,0 +1,676 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Open Sans', sans-serif; 
+}
+
+a{
+    text-decoration: none;
+    color: #616161;
+}
+a i[class='fas fa-chevron-right']{
+    margin-left: 2px;
+}
+a:hover i[class='fas fa-chevron-right']{
+    margin-left: 7px;
+}
+/*Resimlerin üzerindeki buton ustune gelince ok sağa kaydıgında şeklin sağındaki ve kendi arkaplanı buyuyordu bu buyumeyi engelleme*/
+a[class="a-btn"]:hover{ 
+    padding-right: 15px;
+}
+
+a:hover span{
+    border-bottom: 2px solid black;
+}
+.image-items a:hover span{
+    border-bottom: 2px solid #0067b8;
+}
+#footer a:hover{
+    text-decoration: underline;
+    color: #262626;
+}
+.middle-image-info a[class="a-btn"]:hover span{
+    border-bottom: white solid 2px;
+}
+/*-------------------------------------navbar kısmı--------------------------------------------*/
+header .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+header #navbar-left ul, header #navbar-right ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+header nav ul li a{
+    display: inline-block;
+    position: relative;
+    padding: 15px 10px 15px 10px;
+    /* border: dashed black 1px; */
+    color: #262626;
+}
+header nav ul li a[id="icon-btn"]{
+    padding: 15px 10px 15px 40px;
+}
+header nav ul li a img[id="mc-icon"]{
+    position: absolute;
+    left: 10px;
+}
+
+header nav ul li a span{
+    font-size: 13px;
+}
+
+header nav ul li a[id="icon-btn"] span{
+    font-weight: 600;
+    font-size: 17px;
+    opacity: 0.6;
+}
+header nav ul li a:hover span{
+    border-bottom: 2px solid black;
+}
+header nav ul li a[id="icon-btn"]:hover span{
+    border: none;
+}
+#signProcess{
+    padding-right: 40px;
+}
+#signProcess img{
+    position: absolute;
+    right: 5px;
+}
+@media (max-width:1399px){ 
+    #navbar-right ul li a[class="img-tag"] span{
+        display: none;
+    }
+    #signProcess{
+        padding: 26px 25px 26px 25px;
+    }
+    #signProcess img {
+        right: 0.5pc;
+        bottom: 0.7pc;
+    }
+}
+@media (max-width:1083px){ 
+    header .container{
+        padding: 0px 24px;
+    }
+}
+
+/*----------------Mobile Menu---------------------*/
+.show-mobile-menu{
+    display: none;
+}
+.mobile-menu{
+    display: flex;
+    justify-content: space-between;
+}
+.mobile-menu ul{
+    list-style-type: none;
+    display: flex;    
+}
+
+.menu-btn{
+    display: none;
+}
+.menu-1,.menu-2,.menu-3,.menu-4,.menu-5,.menu-6{
+    display: none;
+}
+
+
+@media (max-width:860px){
+    header{
+        display: none;
+    }
+    .show-mobile-menu{
+        display: block;
+        margin-bottom: 2px;
+    }
+    .mobile-menu ul li a{
+        list-style-type: none;
+        display: inline-block;
+        padding: 16px 14px 14px 14px;
+        height: 54px;
+        /* border: 1px dashed black;  */
+    }
+    .mobile-menu ul li a[class="microsoft-icon"]{
+        position: relative;
+        padding-left: 35px;
+    }
+    .mobile-menu ul li a[class="microsoft-icon"] img{
+        position: absolute;
+        left: 7px;
+    }
+    .mobile-menu ul li a[class="microsoft-icon"] span{
+        font-weight: 600;
+        font-size: 17px;
+        color: #262626;
+        opacity: 0.6;
+    }
+
+    .menu-btn{
+        position: absolute;
+        width: 100%;
+        font-size: 15px;
+        font-weight: 400;
+        z-index: 2;
+
+        display: none;
+    }
+
+    .menu-btn #navbar-left{
+        display: block;
+        background-color: #f2f2f2;
+        height: auto;
+        z-index: 3;
+    }
+    .menu-btn ul{
+        list-style-type: none;
+    }
+    .menu-btn ul ul{
+        padding-left: 30px;
+    }
+    .menu-btn #navbar-left>li{
+        border-bottom: 1px solid rgb(230,230,230);
+    }
+    .menu-btn #navbar-left li ul li{
+        border-top: 1px solid rgb(230,230,230);
+    }
+    .menu-btn #navbar-left li a{
+        display: inline-block;
+        width: 100%;
+        color: #262626;
+        padding: 14px 24px 14px 15px;
+    }
+    .menu-btn #navbar-left li a i{
+        float: right;
+        font-size: 10px;
+    }
+    /*-------------------- 3 lü butona tıklayınca aşağı doğru sekme açılma---------------*/
+    label[class="menu-btn"]{
+        display: inline-block;
+        cursor: pointer;
+        width: auto;
+        background: white;
+        padding: 13px 14px;
+        left: 1px;
+        top: 1.3px;
+    }
+    #menuToggle:checked ~ .menu-btn {
+		display: block;
+    }
+    
+
+    label[class="menu-btn1"]{
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        width: 100%;
+        /* background: aquamarine; */
+        padding: 14px 15px;
+    }
+    #navbar-left li{
+        position: relative;
+    }
+    #navbar-left li i{
+        position: absolute;
+        right: 20px;
+        top: 17px;
+        font-size: 13px;
+    }
+
+    /* Mobil Kısmında Navbardaki Sol üstteki menulere basınca yeni menulerin gelmesi */
+    #menuToggle1:checked ~ .menu-1,
+    #menuToggle2:checked ~ .menu-2,
+    #menuToggle3:checked ~ .menu-3,
+    #menuToggle4:checked ~ .menu-4,
+    #menuToggle5:checked ~ .menu-5,
+    #menuToggle6:checked ~ .menu-6{
+		display: block;
+    }
+    /* Yeni menuler geldiği zaman sağ taraftaki ok' un yönünün değişmesi */
+    #menuToggle1:checked ~ i,
+    #menuToggle2:checked ~ i,
+    #menuToggle3:checked ~ i,
+    #menuToggle4:checked ~ i,
+    #menuToggle5:checked ~ i,
+    #menuToggle6:checked ~ i{
+		transform: rotate(180deg);
+    }
+
+}
+
+
+/* Üst 3 lü Icon*/
+
+#top-icons ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#top-icons ul li{
+    list-style-type: none;
+    font-size: 20px ;
+}
+#top-icons ul li{
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    width: 215px;
+    height: 160px;
+    cursor: pointer;
+}
+ #top-icons a:hover span{
+    border: none;
+    text-decoration: underline;
+}
+#top-icons ul li:active{
+    border: 1px solid black;
+    background: aliceblue;
+}
+ #top-icons ul li a:active span{
+    text-decoration: none;
+}
+
+#top-icons ul li a{
+    padding: 50px 34px 30px 34px;
+    z-index: 1;
+}
+#top-icons ul li i{
+    position: relative;
+    top: 40px;
+}
+#top-icons ul li a span{
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 10px;
+    display: inline-block;
+    width: 124px;
+}
+.fa-microsoft:before, .fa-xbox:before,.fa-windows:before  {
+    font-size: 40px;
+}
+
+@media (max-width:767px){
+    #top-icons ul{
+        display: flex;
+        flex-direction: column;
+    }
+    #top-icons ul li{
+        flex-direction: row;
+    }
+    .fa-microsoft:before, .fa-xbox:before, .fa-windows:before{
+        font-size: 24px;
+        padding-left: 5px;
+    }
+    #top-icons ul li i {
+        /* position: unset; */
+        top: 14px;
+    }
+    #top-icons ul li a span {
+        width: 100%;
+        padding: 5px 5px 15px 10px;
+    }
+    #top-icons ul li a {
+        padding: 0px 0px 0px 0px;
+        /* z-index: 1; */
+    }
+    #top-icons ul li{
+        /* height: unset; */
+        width: max-content;
+        height: 50px;
+    }
+    #top-icons{
+        margin-left: 20px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+}
+
+/* Middle İmage*/
+.middle-text-process .container{
+    position: relative;
+}
+.middle-image-info{
+    position: absolute;
+
+    width: 520px;
+    height: 160px;
+    right: 10%;
+    top: 40%;
+    transform: translateY(-50%);
+}
+.middle-text-process .container img{
+    width: 100%
+}
+.middle-image-info .title{
+    font-size: 31px;
+    font-weight: 600;
+    line-height: 40px;
+}
+.middle-image-info .description{
+    margin: 12px 0px 28px 0px;
+    font-size: 14px;
+}
+.middle-image-info a{
+    color: #fff;
+    background-color: #000;
+    padding: 8px 20px;
+}
+@media (max-width:1399px){
+    .middle-image-info{
+        width: 440px;
+    }
+    .middle-image-info .title{
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .middle-image-info .description{
+        margin: 12px 0px 28px 0px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .middle-image-info a{
+        color: #fff;
+        background-color: #000;
+        padding: 8px 20px;
+    }
+}
+@media (max-width:1083px){
+    .middle-text-process .container{
+        padding: 0px;
+    }
+    .middle-image-info{
+        width: 340px;
+        height: 167px;
+        right: 5%;
+        top: 50%;
+    }
+}
+@media (max-width:767px){
+    .middle-image-info{
+        position:unset;
+        text-align: center;
+        width: 82%;
+        margin: 130px auto 0px auto;
+    }
+    .middle-text-process .container{
+        background-color: rgb(230, 230, 230);
+        display: inline-block;
+        height: 520px;
+    }
+}
+
+/* Ust ve Alt Section 4 lü resim*/
+.image-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+ .image-items .img-grup1{
+    display: flex;
+    flex-direction: row;
+    width: 49%;
+}
+.image-items .img-grup2{
+    display: flex;
+    flex-direction: row;
+    width: 49%;
+}
+.image-items .image-item{
+    padding: 0px 12px;
+    width: 100%;
+}
+
+.image-info .title{
+    margin-top: 37px;
+    padding: 1px 0px 2px 0px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+    opacity: 0.85;
+    color: #000000;
+}
+.image-info .description{
+    font-size: 15px;
+    padding: 2px 12px 0px 0px;
+    line-height: 20px;
+    font-size: 14px;
+}
+.image-info a{
+    color: #0067b8;
+    display: inline-block;
+    padding: 10px 3px 7px 0px;
+    border: 2px solid white;
+    font-weight: 600;
+    text-overflow: clip;
+    font-size: 14px;
+    opacity: 0.88;
+}
+.container #img-main-header{
+    padding: 36px 0px 24px 0px;
+    margin-left: 12px;
+}
+
+picture img{
+    width: 100%;
+}
+
+@media (max-width:1083px){
+    .image-items .img-grup1{
+        flex-direction: row;
+        width: 100%;
+        /* margin-bottom: 40px; */
+    }
+    .image-items .img-grup2{
+        flex-direction: row;
+        width: 100%;
+    }
+    picture img{
+        margin-top: 20px;
+    }
+    .container #img-main-header{
+        padding: 36px 0px 0px 0px; 
+    }
+}
+@media (max-width:767px){
+    picture img{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .container #img-main-header{
+        padding: 36px 0px 0px 0px; 
+    }
+}
+@media (max-width:539px){
+    picture img{
+        width: 100%;
+    }
+    .image-items .img-grup1{
+        flex-direction: column;
+        padding-bottom: 15px;
+    }
+    .image-items .img-grup2{
+        flex-direction: column;
+        padding-bottom: 40px;
+    }
+    .image-info .title{
+        margin-top: 12px;
+    }
+    picture img{
+        margin-top: 36px;
+    }
+    #nmbr2-frst-picture img{
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:1083px){
+    .image-items{
+        flex-direction: column;
+    }
+}
+
+/*Social Media*/
+.social-media{
+    margin-top: 40px;
+}
+.social-media ul{
+    display: inline-block;
+}
+.social-media ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 0px 12px 2px 0px;
+}
+.social-media ul li a i{
+    font-size: 30px;
+    border: 1px solid transparent;
+}
+.social-media span{
+    color: #00000099;
+    font-size: 14px;
+    padding-right: 20px;
+    margin-top: 40px;
+     position: relative;
+    bottom: 5px;
+    left: 3px;
+}
+@media (max-width:539px){
+    .social-media{
+        margin-top: 15px;
+    }
+}
+
+/* a[class="a-btn"]:hover{
+    padding-right: 15px;
+    color: red;
+} */
+
+/* footer üst kısım */
+#footer{
+    margin-top: 48px;
+}
+#footer .footer-upper-nav{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 0px 5%;
+    height: 324px;
+}
+#footer .grup-1, #footer .grup-2{
+    display: flex;
+    width: 50%;
+}
+#footer .footer-list{
+    width: 33%;
+}
+#footer .footer-list h4{
+    padding: 36px 0px 4px 0px;
+}
+
+#footer ul li{
+    list-style-type: none;
+    padding: 6px 0px;
+}
+#footer, #footer ul li a{
+    color: #616161;
+    font-size: 11px;
+}
+
+/* footer alt-kısım*/
+#footer .footer-lower-nav .footer-bottom-list{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 5% 16px 5%;
+}
+
+
+#footer .footer-bottom-list{
+    display: flex;
+    width: 100%;
+}
+#footer .footer-bottom-list ul{
+    display: flex;
+    justify-content: space-between;
+    /* width: 60%; */
+    padding-right: 24px;
+}
+#footer .footer-bottom-list ul li{
+    padding: 0px 24px 4px 0px;
+}
+#footer .footer-bottom-list ul li>a{
+    font-size: 10.1px;
+}
+#footer .footer-bottom-list>a{
+    position: relative;
+    padding-left: 30px;
+    padding-right: 22px;
+}
+#footer .footer-bottom-list>a img{
+    position: absolute;
+    top: -2px;
+    left: 0px;
+}
+
+/* a:hover{
+    text-decoration: underline;
+} */
+
+
+
+/* Slider-Show daki radio button işlemleri*/
+.middle-text-process{
+    margin-bottom: 40px;
+}
+.middle-text-process #slideImage-1 #slide-img1{
+    position: absolute;
+    left: 48%;
+    bottom: 30px;
+}
+.middle-text-process #slideImage-1 #slide-img2{
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+}
+
+@media (max-width:861px){
+    .middle-text-process #slideImage-1 #slide-img2{
+        position: absolute;
+        left: 51%;
+        bottom: 30px;
+    }
+}
+@media (max-width:660px){
+    .middle-text-process #slideImage-1 #slide-img1{
+        position: absolute;
+        left: 47%;
+        bottom: 30px;
+    }
+}
+
+.middle-text-process #slideImage-1 .show-1{
+    display: none;
+}
+.middle-text-process #slideImage-1 .show-2{
+    display: none;
+}
+
+#slide-img1:checked ~ .show-1{
+    display: block;
+}
+#slide-img2:checked ~ .show-2{
+    display: block;
+}
+/*Slideshow kısmında yazı aşağı inice input un üstüne tıklanmıyor ondan bunu öne çıkardım ki tıklayabileyim*/
+#slideImage-1 input{
+    z-index: 1;
+}
